@@ -50,7 +50,7 @@ peer:
         interval: 7200s
         # Timeout is the duration the server waits for a response
         # from the client after sending a ping before closing the connection
-        timeout: 20s
+        timeout: 50s
         # MinInterval is the minimum permitted time between client pings.
         # If clients send pings more frequently, the peer server will
         # disconnect them
@@ -63,7 +63,7 @@ peer:
             interval: 60s
             # Timeout is the duration the client waits for a response from
             # peer nodes before closing the connection
-            timeout: 20s
+            timeout: 50s
         # DeliveryClient keepalive settings for communication with ordering
         # nodes.
         deliveryClient:
@@ -73,7 +73,7 @@ peer:
             interval: 60s
             # Timeout is the duration the client waits for a response from
             # ordering nodes before closing the connection
-            timeout: 20s
+            timeout: 50s
 
 
     # Gossip related configuration
@@ -539,7 +539,7 @@ chaincode:
     # build the image, which might take more time. In production environment,
     # the chaincode image is unlikely to be deleted, so the timeout could be
     # reduced accordingly.
-    executetimeout: 30s
+    executetimeout: 100s
 
     # There are 2 modes: "dev" and "net".
     # In dev mode, user runs the chaincode after starting peer from
